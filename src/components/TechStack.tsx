@@ -41,27 +41,27 @@ const techData = {
 
 const SectionHeader = ({ inView }: { inView: boolean }) => (
   <motion.div 
-    className="text-center mb-16"
+    className="text-center mb-12 sm:mb-16 px-4"
     initial={{ opacity: 0, y: 50 }}
     animate={inView ? { opacity: 1, y: 0 } : {}}
     transition={{ duration: 0.8, ease: 'easeOut' }}
   >
-    <h2 className="text-4xl font-bold text-white mb-6 font-cyber">
+    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 font-cyber">
       Technology <span className="text-neon-green">Arsenal</span>
     </h2>
-    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+    <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
       A curated list of tools and technologies I wield to build next-generation solutions.
     </p>
   </motion.div>
 );
 
 const CategoryFilter = ({ categories, selected, setSelected }: any) => (
-  <div className="flex flex-wrap justify-center gap-4 mb-12">
+  <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4">
     {categories.map((cat: any) => (
       <motion.button
         key={cat.id}
         onClick={() => setSelected(cat.id === selected ? null : cat.id)}
-        className={`px-4 py-2 rounded-lg font-mono text-sm border-2 transition-all duration-300 ${
+        className={`px-3 sm:px-4 py-2 rounded-lg font-mono text-xs sm:text-sm border-2 transition-all duration-300 ${
           selected === cat.id
             ? 'bg-neon-green/90 text-cyber-black border-neon-green shadow-neon'
             : 'bg-cyber-dark/50 text-gray-300 border-cyber-light hover:border-neon-green hover:text-neon-green'
@@ -89,7 +89,7 @@ const TechChip = ({ tool, index }: { tool: any, index: number }) => {
   const content = (
     <motion.div
       variants={chipVariants}
-      className="group relative bg-cyber-gray p-4 rounded-lg border border-cyber-light overflow-hidden h-full flex flex-col justify-between"
+      className="group relative bg-cyber-gray p-3 sm:p-4 rounded-lg border border-cyber-light overflow-hidden h-full flex flex-col justify-between"
       whileHover={{ y: -5, scale: 1.03, borderColor: '#00ff41' }}
     >
       {/* Corner accents */}
@@ -98,9 +98,9 @@ const TechChip = ({ tool, index }: { tool: any, index: number }) => {
       <div className="absolute bottom-1 left-1 w-2 h-2 border-b-2 border-l-2 border-neon-green/30 group-hover:border-neon-green transition-colors" />
       <div className="absolute bottom-1 right-1 w-2 h-2 border-b-2 border-r-2 border-neon-green/30 group-hover:border-neon-green transition-colors" />
 
-      <div className="flex items-center space-x-3 mb-4">
-        <tool.icon className="h-6 w-6 text-neon-green transition-all duration-300 group-hover:text-neon-bright" />
-        <span className="font-mono font-bold text-white text-md">{tool.name}</span>
+      <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+        <tool.icon className="h-5 w-5 sm:h-6 sm:w-6 text-neon-green transition-all duration-300 group-hover:text-neon-bright" />
+        <span className="font-mono font-bold text-white text-sm sm:text-base">{tool.name}</span>
       </div>
       
       <div className="w-full bg-cyber-light rounded-full h-2.5">
@@ -141,7 +141,7 @@ const TechStack: React.FC = () => {
         />
         
         <motion.div 
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={{}}

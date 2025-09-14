@@ -151,3 +151,64 @@
   background: var(--neon-bright);
   box-shadow: 0 0 10px var(--neon-bright);
 }
+
+/* Responsive Base Styles */
+@layer base {
+  html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  body {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Ensure text is readable on small screens */
+  @media (max-width: 640px) {
+    .text-xs { font-size: 0.75rem; }
+    .text-sm { font-size: 0.875rem; }
+    .text-base { font-size: 1rem; }
+    .text-lg { font-size: 1.125rem; }
+    .text-xl { font-size: 1.25rem; }
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .shadow-neon {
+    box-shadow: 0 0 3px var(--neon-green), 0 0 6px var(--neon-green), 0 0 12px var(--neon-green);
+  }
+  
+  .shadow-neon-lg {
+    box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
+  }
+  
+  .shadow-neon-xl {
+    box-shadow: 0 0 8px var(--neon-green), 0 0 15px var(--neon-green), 0 0 30px var(--neon-green);
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-matrix,
+  .animate-pulse-neon,
+  .animate-glow,
+  .animate-float,
+  .animate-typewriter,
+  .animate-blink,
+  .animate-slide-up,
+  .animate-fade-in,
+  .animate-bounce-glow {
+    animation: none;
+  }
+  
+  * {
+    transition-duration: 0.1s !important;
+  }
+}

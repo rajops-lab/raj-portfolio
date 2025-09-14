@@ -20,15 +20,15 @@ interface ContactInfoData {
 
 const SectionHeader = ({ inView }: { inView: boolean }) => (
   <motion.div
-    className="text-center mb-16"
+    className="text-center mb-12 sm:mb-16 px-4"
     initial={{ opacity: 0, y: 30 }}
     animate={inView ? { opacity: 1, y: 0 } : {}}
     transition={{ duration: 0.8, ease: 'easeOut' }}
   >
-    <h2 className="text-5xl font-bold text-white mb-6 font-cyber">
+    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 font-cyber">
       Let's <span className="text-neon-green">Connect</span>
     </h2>
-    <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
+    <p className="text-gray-400 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
       Have a project in mind or just want to say hello? Drop me a line.
     </p>
   </motion.div>
@@ -43,21 +43,21 @@ const ContactDetails = ({ info }: { info: ContactInfoData }) => (
 );
 
 const ContactItem = ({ icon: Icon, label, value, href }: any) => (
-  <a href={href} className="group flex items-center space-x-4 p-4 bg-cyber-dark/60 rounded-lg border border-neon-green/20 hover:border-neon-green/60 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-neon">
-    <div className="flex-shrink-0 w-12 h-12 bg-neon-green/10 rounded-full flex items-center justify-center border-2 border-neon-green/30 group-hover:border-neon-green transition-all">
-      <Icon className="h-6 w-6 text-neon-green" />
+  <a href={href} className="group flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-cyber-dark/60 rounded-lg border border-neon-green/20 hover:border-neon-green/60 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-neon">
+    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-neon-green/10 rounded-full flex items-center justify-center border-2 border-neon-green/30 group-hover:border-neon-green transition-all">
+      <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-neon-green" />
     </div>
     <div>
-      <div className="text-gray-400 text-sm font-mono">{label}</div>
-      <div className="text-white font-semibold text-lg group-hover:text-neon-green transition-colors">{value}</div>
+      <div className="text-gray-400 text-xs sm:text-sm font-mono">{label}</div>
+      <div className="text-white font-semibold text-base sm:text-lg group-hover:text-neon-green transition-colors break-all sm:break-normal">{value}</div>
     </div>
   </a>
 );
 
 const SocialLinks = ({ socials }: { socials: ContactInfoData['socials'] }) => (
-  <div className="mt-10">
-    <h3 className="text-2xl font-bold text-white mb-6 font-mono">// Find me on</h3>
-    <div className="flex space-x-4">
+  <div className="mt-8 sm:mt-10">
+    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 font-mono">// Find me on</h3>
+    <div className="flex space-x-3 sm:space-x-4 justify-center sm:justify-start">
       <SocialLink href={socials.linkedin} icon={Linkedin} label="LinkedIn" />
       <SocialLink href={socials.github} icon={Github} label="GitHub" />
       <SocialLink href={socials.twitter} icon={Twitter} label="Twitter" />
@@ -66,8 +66,8 @@ const SocialLinks = ({ socials }: { socials: ContactInfoData['socials'] }) => (
 );
 
 const SocialLink = ({ href, icon: Icon, label }: any) => (
-  <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="group w-14 h-14 bg-cyber-dark/60 rounded-lg flex items-center justify-center border border-neon-green/20 hover:border-neon-green hover:bg-neon-green hover:text-cyber-black transition-all duration-300 transform hover:scale-110">
-    <Icon className="h-6 w-6 text-neon-green group-hover:text-inherit" />
+  <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="group w-12 h-12 sm:w-14 sm:h-14 bg-cyber-dark/60 rounded-lg flex items-center justify-center border border-neon-green/20 hover:border-neon-green hover:bg-neon-green hover:text-cyber-black transition-all duration-300 transform hover:scale-110">
+    <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-neon-green group-hover:text-inherit" />
   </a>
 );
 
@@ -92,7 +92,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-cyber-dark/60 p-8 rounded-lg border border-neon-green/20">
+    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 bg-cyber-dark/60 p-6 sm:p-8 rounded-lg border border-neon-green/20">
       <FormField name="name" label="Full Name" placeholder="Your Name" value={formData.name} onChange={handleChange} />
       <FormField name="email" type="email" label="Email Address" placeholder="your.email@example.com" value={formData.email} onChange={handleChange} />
       <FormField name="message" type="textarea" label="Message" placeholder="Your project details..." value={formData.message} onChange={handleChange} />
@@ -112,9 +112,9 @@ const FormField = ({ name, label, type = 'text', placeholder, value, onChange }:
     </label>
     <div className="relative">
       {type === 'textarea' ? (
-        <textarea id={name} name={name} value={value} onChange={onChange} placeholder={placeholder} rows={5} className="w-full px-4 py-3 bg-cyber-black/70 border-2 border-cyber-light rounded-md text-white focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-neon-green transition-all" />
+        <textarea id={name} name={name} value={value} onChange={onChange} placeholder={placeholder} rows={4} className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-cyber-black/70 border-2 border-cyber-light rounded-md text-white focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-neon-green transition-all text-sm sm:text-base" />
       ) : (
-        <input id={name} name={name} type={type} value={value} onChange={onChange} placeholder={placeholder} className="w-full px-4 py-3 bg-cyber-black/70 border-2 border-cyber-light rounded-md text-white focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-neon-green transition-all" />
+        <input id={name} name={name} type={type} value={value} onChange={onChange} placeholder={placeholder} className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-cyber-black/70 border-2 border-cyber-light rounded-md text-white focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-neon-green transition-all text-sm sm:text-base" />
       )}
     </div>
   </div>
@@ -144,12 +144,12 @@ const Contact: React.FC = () => {
       <DottedBackground />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeader inView={inView} />
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           <motion.div initial={{ opacity: 0, x: -50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8, delay: 0.2 }}>
             <ContactDetails info={contactData as ContactInfoData} />
             <SocialLinks socials={contactData.socials} />
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8, delay: 0.4 }}>
+          <motion.div initial={{ opacity: 0, x: 50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8, delay: 0.4 }} className="mt-8 lg:mt-0">
             <ContactForm />
           </motion.div>
         </div>

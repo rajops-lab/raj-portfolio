@@ -61,7 +61,7 @@ const Typewriter: React.FC<{ phrases: string[] }> = ({ phrases }) => {
   }, [phrases, currentIndex, displayText, isDeleting, isPaused]);
 
   return (
-    <div className="font-mono text-2xl md:text-4xl lg:text-5xl font-extrabold min-h-[3rem] md:min-h-[4rem] lg:min-h-[5rem]">
+    <div className="font-mono text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold min-h-[2.5rem] sm:min-h-[3rem] md:min-h-[4rem] lg:min-h-[5rem] text-center sm:text-left">
       <span className="text-white">I am a </span>
       <span
         className="text-neon-green inline-block min-w-[1ch]"
@@ -69,7 +69,7 @@ const Typewriter: React.FC<{ phrases: string[] }> = ({ phrases }) => {
       >
         {displayText}
         <motion.span 
-          className="inline-block w-0.5 h-6 md:h-8 lg:h-10 align-middle ml-1 bg-neon-green" 
+          className="inline-block w-0.5 h-5 sm:h-6 md:h-8 lg:h-10 align-middle ml-1 bg-neon-green" 
           style={{ boxShadow: '0 0 10px #00ff41' }}
           animate={{ opacity: [1, 0, 1] }}
           transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
@@ -107,7 +107,7 @@ const MatrixMini: React.FC = () => {
 
 const NeonProfile: React.FC = () => {
   return (
-    <div className="relative w-40 h-40 md:w-52 md:h-52 mx-auto">
+    <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-52 lg:h-52 mx-auto">
       {/* Rotating neon ring */}
       <motion.div
         className="absolute inset-0 rounded-full"
@@ -132,7 +132,7 @@ const NeonProfile: React.FC = () => {
         <MatrixMini />
         {/* Initials placeholder */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="font-extrabold text-xl md:text-2xl tracking-widest text-white/90" style={{ textShadow: '0 0 10px rgba(0,255,65,0.6)' }}>
+          <div className="font-extrabold text-lg sm:text-xl lg:text-2xl tracking-widest text-white/90" style={{ textShadow: '0 0 10px rgba(0,255,65,0.6)' }}>
             RA
           </div>
         </div>
@@ -143,7 +143,7 @@ const NeonProfile: React.FC = () => {
 
 const CyberHero: React.FC = () => {
   return (
-    <section className="relative min-h-[85vh] flex items-center">
+    <section className="relative min-h-[80vh] sm:min-h-[85vh] flex items-center px-4 sm:px-6 lg:px-8">
       {/* Animated grid background */}
       <motion.div
         className="absolute inset-0"
@@ -163,7 +163,7 @@ const CyberHero: React.FC = () => {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left: Text */}
         <div>
           <div className="inline-flex items-center space-x-2 mb-4">
@@ -174,7 +174,7 @@ const CyberHero: React.FC = () => {
           </div>
 
           <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-4 sm:mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -212,7 +212,7 @@ const CyberHero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-light">
+            <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed font-light">
               Specialized in building <span className="text-neon-green font-semibold">scalable cloud infrastructure</span> and 
               <span className="text-cyberpunk-cyan font-semibold"> microservices architectures</span>. 
               Expert in Kubernetes, Docker, and modern DevOps practices with 
@@ -221,7 +221,7 @@ const CyberHero: React.FC = () => {
             </p>
             
             {/* Key Skills Highlight */}
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap gap-2 justify-center sm:justify-start">
               {[
                 { skill: 'Kubernetes', colorClass: 'text-neon-green border-neon-green/50', hoverShadow: 'rgba(0,255,65,0.5)' },
                 { skill: 'Docker', colorClass: 'text-neon-electric border-neon-electric/50', hoverShadow: 'rgba(0,255,255,0.5)' },
@@ -250,13 +250,13 @@ const CyberHero: React.FC = () => {
 
           {/* CTA Buttons */}
           <motion.div 
-            className="flex flex-wrap gap-4 mb-8"
+            className="flex flex-col sm:flex-row gap-4 mb-6 sm:mb-8 items-center sm:items-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
             <motion.button
-              className="group px-6 py-3 bg-gradient-to-r from-neon-green to-neon-bright text-black font-bold rounded-lg font-mono transition-all duration-300 shadow-neon overflow-hidden relative"
+              className="group w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-neon-green to-neon-bright text-black font-bold rounded-lg font-mono transition-all duration-300 shadow-neon overflow-hidden relative"
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0,255,65,0.6)' }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
@@ -272,7 +272,7 @@ const CyberHero: React.FC = () => {
             </motion.button>
             
             <motion.button
-              className="group px-6 py-3 border-2 border-neon-electric text-neon-electric font-bold rounded-lg font-mono transition-all duration-300 hover:bg-neon-electric hover:text-black backdrop-blur-sm"
+              className="group w-full sm:w-auto px-6 py-3 border-2 border-neon-electric text-neon-electric font-bold rounded-lg font-mono transition-all duration-300 hover:bg-neon-electric hover:text-black backdrop-blur-sm"
               whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(0,255,255,0.4)' }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
@@ -289,7 +289,7 @@ const CyberHero: React.FC = () => {
 
           {/* Status Badges */}
           <motion.div 
-            className="flex flex-wrap items-center gap-3"
+            className="flex flex-wrap items-center gap-2 sm:gap-3 justify-center sm:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
@@ -324,7 +324,7 @@ const CyberHero: React.FC = () => {
         </div>
 
         {/* Right: Neon Profile */}
-        <div className="flex justify-center md:justify-end">
+        <div className="flex justify-center lg:justify-end order-first lg:order-last">
           <NeonProfile />
         </div>
       </div>

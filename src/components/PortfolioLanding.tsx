@@ -34,14 +34,14 @@ const PortfolioLanding: React.FC = () => {
       <SEO />
     <div className="min-h-screen bg-cyber-black text-neon-electric font-mono relative overflow-hidden">
       {/* <BlockchainBackground /> */}
-      {/* Cyberpunk Grid Background */}
+      {/* Cyberpunk Grid Background - Responsive */}
       <div className="absolute inset-0 opacity-10">
         <div className="w-full h-full" style={{
           backgroundImage: `
             linear-gradient(rgba(0,255,255,0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0,255,255,0.1) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px'
+          backgroundSize: 'clamp(30px, 5vw, 50px) clamp(30px, 5vw, 50px)'
         }} />
       </div>
       
@@ -74,8 +74,8 @@ const PortfolioLanding: React.FC = () => {
         <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-neon-green shadow-neon animate-glow" />
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-20 pt-20">
+      {/* Main Content - Responsive padding */}
+      <div className="relative z-20 pt-16 sm:pt-20 lg:pt-24">
         <CyberHero />
       </div>
 
@@ -90,9 +90,9 @@ const PortfolioLanding: React.FC = () => {
         <Footer />
       </div>
 
-      {/* Enhanced Cyberpunk "Jack In" Terminal Button */}
+      {/* Enhanced Cyberpunk "Jack In" Terminal Button - Responsive */}
       <motion.button
-        className="fixed bottom-6 right-6 z-30 px-6 py-4 rounded-lg bg-gradient-to-br from-cyber-black via-cyber-dark to-cyber-black border-2 border-neon-electric text-neon-electric font-bold font-mono shadow-neon backdrop-blur-md overflow-hidden group"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-30 px-3 py-2 sm:px-6 sm:py-4 rounded-lg bg-gradient-to-br from-cyber-black via-cyber-dark to-cyber-black border-2 border-neon-electric text-neon-electric font-bold font-mono shadow-neon backdrop-blur-md overflow-hidden group"
         whileHover={{ 
           scale: 1.05, 
           boxShadow: '0 0 30px rgba(0,255,255,0.6), inset 0 0 20px rgba(0,255,255,0.1)' 
@@ -107,11 +107,11 @@ const PortfolioLanding: React.FC = () => {
         {/* Animated background effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-neon-electric/20 via-cyberpunk-cyan/10 to-neon-electric/20 animate-pulse group-hover:animate-bounce-glow" />
         
-        {/* Button content */}
-        <span className="relative z-10 flex items-center gap-2">
+        {/* Button content - Responsive text */}
+        <span className="relative z-10 flex items-center gap-1 sm:gap-2">
           <span className="animate-pulse">●</span>
-          <span className="tracking-wider">JACK_IN</span>
-          <span className="text-xs opacity-70">[ENTER]</span>
+          <span className="tracking-wider text-sm sm:text-base">JACK_IN</span>
+          <span className="text-xs opacity-70 hidden sm:inline">[ENTER]</span>
         </span>
         
         {/* Glitch lines */}
