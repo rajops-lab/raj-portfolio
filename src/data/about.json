@@ -1,0 +1,63 @@
+{
+  "title": "About Me",
+  "tagline": "I build bridges between ideas and reality, crafting scalable, reliable systems that thrive in the production wild.",
+  "introduction": "I'm a passionate Solution Developer with deep expertise in bridging the gap between modern development and robust operations. My focus is on creating elegant, high-performing systems that are not just functional, but are also a pleasure to maintain and scale.",
+  "journey": [
+    "With over 5 years of hands-on experience, I've navigated the complexities of software development and infrastructure management, helping organizations of all sizes build resilient, future-proof solutions that drive business success.",
+    "My approach is rooted in a deep passion for automation, cloud-native principles, and the art of creating systems that are both powerful and practical. I believe in a collaborative process, working closely with teams to turn ambitious goals into tangible results."
+  ],
+  "stats": [
+    { "value": "5+", "label": "Years Experience" },
+    { "value": "50+", "label": "Projects Delivered" },
+    { "value": "99.9%", "label": "Avg. Uptime" }
+  ],
+  "keySkills": [
+    {
+      "title": "Full-Stack Development",
+      "description": "Crafting seamless user experiences and robust server-side logic using modern frameworks.",
+      "icon": "Code"
+    },
+    {
+      "title": "Cloud & Infrastructure",
+      "description": "Designing and managing scalable, secure infrastructure on major cloud platforms.",
+      "icon": "Server"
+    },
+    {
+      "title": "DevOps & Automation",
+      "description": "Building automated CI/CD pipelines, containerizing applications, and implementing monitoring solutions.",
+      "icon": "Zap"
+    }
+  ],
+  "competencies": [
+    {
+      "skill": "Cloud Architecture",
+      "techs": "AWS, Azure, GCP",
+      "level": 5
+    },
+    {
+      "skill": "Container Orchestration",
+      "techs": "Kubernetes, Docker, Helm",
+      "level": 5
+    },
+    {
+      "skill": "Infrastructure as Code",
+      "techs": "Terraform, Ansible, Pulumi",
+      "level": 4
+    },
+    {
+      "skill": "CI/CD Pipeline Design",
+      "techs": "Jenkins, GitLab CI, GitHub Actions",
+      "level": 5
+    },
+    {
+      "skill": "Microservices Architecture",
+      "techs": "REST, gRPC, Event-Driven",
+      "level": 4
+    },
+    {
+      "skill": "Observability & Monitoring",
+      "techs": "Prometheus, Grafana, ELK Stack, OpenTelemetry",
+      "level": 4
+    }
+  ]
+}

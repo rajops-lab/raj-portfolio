@@ -1,0 +1,10 @@
+{
+  "email": "rajesh.avhad@example.com",
+  "phone": "+91 98765 43210",
+  "location": "Mumbai, India",
+  "socials": {
+    "linkedin": "https://linkedin.com/in/rajeshavhad",
+    "github": "https://github.com/rajeshavhad",
+    "twitter": "https://twitter.com/rajeshavhad"
+  }
+}

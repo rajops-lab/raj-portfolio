@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Cloud Infrastructure Automation",
+    "slug": "cloud-infra-automation",
+    "description": "A comprehensive solution for deploying and managing multi-cloud infrastructure using Terraform. Features automated CI/CD pipelines with Jenkins and containerized deployments with Docker.",
+    "technologies": ["Terraform", "AWS", "Jenkins", "Docker", "Python"],
+    "image": "/images/projects/cloud-infra.jpg",
+    "github": "https://github.com/rajeshavhad/cloud-infra-platform",
+    "demo": "",
+    "category": "DevOps & Cloud"
+  },
+  {
+    "title": "Kubernetes Microservices Platform",
+    "slug": "kubernetes-microservices",
+    "description": "A highly scalable and resilient microservices platform built on Kubernetes. Includes a service mesh with Istio for advanced traffic management, observability with Prometheus, and automated scaling.",
+    "technologies": ["Kubernetes", "Istio", "Prometheus", "Go", "React"],
+    "image": "/images/projects/microservices.jpg",
+    "github": "https://github.com/rajeshavhad/microservices-platform",
+    "demo": "https://demo.microservices.example.com",
+    "category": "Microservices"
+  },
+  {
+    "title": "Self-Service DevOps Platform",
+    "slug": "self-service-devops",
+    "description": "Empowers development teams with a self-service portal to create, deploy, and manage their applications. Automates testing, security scanning (SAST/DAST), and monitoring.",
+    "technologies": ["GitLab CI", "Ansible", "Grafana", "React", "Node.js"],
+    "image": "/images/projects/devops-pipeline.jpg",
+    "github": "https://github.com/rajeshavhad/devops-pipeline",
+    "demo": "",
+    "category": "DevOps & Cloud"
+  },
+  {
+    "title": "Cloud-Native E-commerce App",
+    "slug": "ecommerce-app",
+    "description": "A modern e-commerce platform built from the ground up with a cloud-native, microservices-based architecture. Deployed on Kubernetes for scalability and resilience.",
+    "technologies": ["React", "Node.js", "PostgreSQL", "Docker", "Kubernetes"],
+    "image": "/images/projects/ecommerce.jpg",
+    "github": "https://github.com/rajeshavhad/ecommerce-app",
+    "demo": "https://demo.ecommerce.example.com",
+    "category": "Full-Stack"
+  },
+  {
+    "title": "Multi-Cloud Disaster Recovery",
+    "slug": "multi-cloud-dr",
+    "description": "An automated disaster recovery solution that provides business continuity across multiple cloud providers (AWS and Azure). Features real-time data replication and automated failover.",
+    "technologies": ["AWS", "Azure", "Terraform", "Python", "Vault"],
+    "image": "/images/projects/disaster-recovery.jpg",
+    "github": "https://github.com/rajeshavhad/multi-cloud-dr",
+    "demo": "",
+    "category": "DevOps & Cloud"
+  },
+  {
+    "title": "AI-Powered Anomaly Detection",
+    "slug": "ai-monitoring",
+    "description": "An intelligent monitoring system that leverages machine learning to predict and prevent infrastructure issues. Uses TensorFlow for model training and integrates with Prometheus for real-time data.",
+    "technologies": ["Python", "TensorFlow", "Prometheus", "Grafana", "Kafka"],
+    "image": "/images/projects/ai-monitoring.jpg",
+    "github": "https://github.com/rajeshavhad/ai-monitoring",
+    "demo": "https://demo.ai-monitoring.example.com",
+    "category": "AI & Machine Learning"
+  }
+]
