@@ -61,8 +61,8 @@ const Typewriter: React.FC<{ phrases: string[] }> = ({ phrases }) => {
   }, [phrases, currentIndex, displayText, isDeleting, isPaused]);
 
   return (
-    <div className="font-mono text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold min-h-[2.5rem] sm:min-h-[3rem] md:min-h-[4rem] lg:min-h-[5rem] text-center sm:text-left">
-      <span className="text-white">I am a </span>
+    <div className="font-mono text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold min-h-[3.5rem] sm:min-h-[4.5rem] md:min-h-[5.5rem] lg:min-h-[6.5rem] text-center sm:text-left w-full">
+      <span className="text-white">I am </span>
       <span
         className="text-neon-green inline-block min-w-[1ch]"
         style={{ textShadow: '0 0 12px rgba(0,255,65,0.7), 0 0 24px rgba(0,255,65,0.5)' }}
@@ -196,7 +196,7 @@ const CyberHero: React.FC = () => {
               phrases={[
                 'Solution Developer',
                 'DevOps Engineer',
-                'Cloud Architect', 
+                'Cloud Architect',
                 'Kubernetes Expert',
                 'Python Developer',
                 'Terraform Developer',
